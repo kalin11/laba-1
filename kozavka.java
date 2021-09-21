@@ -1,4 +1,4 @@
-public class test {
+public class laba {
     public static long[] First(){
         int i;
         int n = 3;
@@ -24,10 +24,19 @@ public class test {
         long[] a1 = First();
         float[] x1 = Second();
         int i,j;
+        float[] m = new float[16];
+        System.out.print("Second task is: ");
+        for (j = 0; j<=15;j++){
+            m[j]=x1[j];
+            System.out.printf("%5.5f",m[j]);
+            System.out.print(" ");
+
+        }
+        System.out.println();
         double[][] d = new double[15][16];
         for (i = 0; i <= 14; i++){
             for (j = 0; j <= 15;j++){
-                double z = x1[j];
+                double z = m[j];
                 if (a1[i] == 4 || a1[i] == 7 || a1[i] == 8 || a1[i] == 9 || a1[i] == 14 || a1[i] == 15 || a1[i] == 16 || a1[i] == 17){
                     if (a1[i] == 7){
                         d[i][j] = (double) Math.sin(4 * (Math.pow((z/4),z) - 2));
@@ -58,23 +67,16 @@ public class test {
     }
     public static void main(String[] args){
         long[] a = First();
-        int i;
+        int i,j;
+        System.out.print("First task is: ");
         for (i = 0; i <= 14; i++){
+
             System.out.print(a[i] + " ");
         }
         System.out.println();
-        float[] x = Second();
-        int j;
-        for (j = 0; j <= 15; j++){
-            System.out.printf("%.5f",x[j]);
-            System.out.print(" ");
-        }
-        System.out.println();
-        System.out.print(Second()[0]); //вот тут я пытаюсь проверить сходится ли первый элемент рандомного массива при выводе и при использовании в формуле
-        System.out.println();
-        System.out.print(Second()[0]); // то есть каждый раз он выдает другое значение и массив всегда разный при вызове метода
-        System.out.println(); // что делать с этим? :(
         double[][] alpha = Third();
+        System.out.print("Third task is: ");
+        System.out.println();
         for (i = 0; i <= 14; i++){
             for (j = 0; j <= 15; j++){
                 System.out.printf("%13.5f",alpha[i][j]);
